@@ -1,0 +1,21 @@
+# Brewfile for personal workspace
+
+brew "handbrake"
+brew "abcde"
+brew "cd-discid"
+brew "flac"
+brew "lame"
+brew "eye-d3"
+brew "ffmpeg"
+brew "lsdvd"
+
+# https://www.balena.io/etcher/
+# For flashing Home Assistant SD cards
+cask "balenaetcher"
+
+# Cask version of Wesnoth is 1.17 development version
+# cask "the-battle-for-wesnoth"
+
+cask "dropbox"
+cask "google-drive"
+cask "signal"

@@ -1,0 +1,114 @@
+#
+# Brewfile
+# https://github.com/Homebrew/homebrew-bundle
+#
+
+brew "bash"
+brew "zsh"
+brew "zsh-async"
+brew "zsh-syntax-highlighting"
+brew "tmux"
+brew "tmuxp"
+brew "reattach-to-user-namespace"
+brew "python"
+brew "swig"
+brew "keychain"
+brew "pass"
+brew "m-cli"
+brew "chezmoi"
+
+brew "dotbot"
+
+brew "git"
+brew "tig"
+brew "git-subrepo"
+# Github client
+brew "gh"
+
+brew "wget"
+
+brew "markdown"
+brew "grip"  # Github-flavord Markdown
+
+brew "ctags-exuberant"
+
+# Needed for vim/YouCompleteMe
+brew "cmake"
+
+brew "mono"
+brew "go"
+brew "nodejs"
+
+brew "gpg2"
+brew "pinentry-mac"
+
+brew "mr"
+brew "findutils"
+brew "moreutils"
+
+brew "vifm"
+brew "mc"
+brew "libyaml"
+brew "watch"
+brew "imagemagick"
+brew "pandoc"
+
+# Mac utilities
+brew "duti"  # Default app manager
+
+brew "ykman"
+brew "yubikey-personalization"  # aka 'ykpers'
+
+brew "chrome-cli"
+brew "lua"
+
+brew "vim"
+brew "neovim"
+
+brew "fzf"
+
+# https://blink1.thingm.com/blink1-tool/
+brew "blink1"
+
+brew "the_silver_searcher"  # aka 'ag'
+
+# To allow TouchId to work within tmux
+# https://github.com/fabianishere/pam_reattach
+brew "pam_reattach"
+
+# https://github.com/Textualize/rich-cli
+tap "textualize/rich"
+brew "rich"
+
+cask "skype"
+cask "google-chrome"
+cask "macvim", args: { "no-binaries": true }
+cask "omnigraffle"
+cask "commander-one"
+cask "firefox"
+cask "evernote"
+cask "kindle"
+cask "send-to-kindle"
+cask "hiarcs-chess-explorer"
+cask "iterm2"
+cask "zoom"
+cask "hammerspoon"
+cask "karabiner-elements"
+cask "mirrordisplays"
+cask "vox"
+cask "obs"
+
+# CLI for Apple Store: https://github.com/mas-cli/mas
+brew "mas"
+
+mas "HP Easy Scan", id: 967004861
+mas "HP Smart", id: 1474276998
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
