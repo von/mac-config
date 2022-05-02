@@ -14,6 +14,41 @@ _zero="zero"
 # Kudos: https://stackoverflow.com/a/246128/197789
 _setup_path=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+_config_file=${HOME}/.mac_config
+
+######################################################################
+#
+# Source configuration file (~/.mac-config) if it exists
+#
+
+if test -f "${_config_file}" ; then
+  echo "Sourcing ${_config_file}"
+  source ${_config_file}
+fi
+
+######################################################################
+#
+# Make sure we specify a workspace if required
+#
+
+if test $# -gt 0 ; then
+  workspace=$1; shift
+fi
+
+if test -d "${_setup_path}/workspaces" ; then
+  if test -z "${workspace}" ; then
+    echo "Workspace required but not given."
+    exit 1
+  else
+    if test -d "${_setup_path}/workspaces/${workspace}" ; then
+      echo "Using workspace ${workspace}"
+    else
+      echo "No such workspace ${workspace}"
+      exit 1
+    fi
+  fi
+fi
+
 ######################################################################
 
 echo "Checking for XCode command-line tools..."
@@ -71,7 +106,7 @@ EOF
 # Execute zero using this director as its configuration directory.
 
 echo "Executing zero.sh to configure system..."
-${_zero} setup --directory "${_setup_path}" "$@"
+${_zero} setup --directory "${_setup_path}" ${workspace}
 
 echo "Success."
 exit 0
