@@ -81,6 +81,7 @@ tap "textualize/rich"
 brew "rich"
 
 cask "skype"
+cask "slack"
 cask "google-chrome"
 cask "macvim", args: { "no-binaries": true }
 cask "omnigraffle"
