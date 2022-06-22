@@ -80,6 +80,10 @@ brew "pam_reattach"
 tap "textualize/rich"
 brew "rich"
 
+# https://github.com/jakehilborn/displayplacer
+tap "jakehilborn/jakehilborn"
+brew "displayplacer"
+
 cask "skype"
 cask "slack"
 cask "google-chrome"
