@@ -7,5 +7,5 @@ set -o errexit  # Exit on error
 
 echo "Adding /usr/local/bin and $HOME/bin to default path via launchctl"
 echo "Reboot required to take effect."
-sudo launchctl config user path /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:usr/local/sbin:$HOME/bin
+sudo launchctl config user path /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin
 exit 0
