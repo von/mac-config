@@ -5,9 +5,8 @@
 
 brew "bash"
 brew "zsh"
+brew "antigen"
 brew "zsh-async"
-brew "zsh-syntax-highlighting"
-brew "zsh-autosuggestions"
 brew "tmux"
 brew "tmuxp"
 brew "reattach-to-user-namespace"
