@@ -5,7 +5,11 @@
 #
 set -o errexit  # Exit on error
 
-echo "Adding /usr/local/bin and $HOME/bin to default path via launchctl"
-echo "Reboot required to take effect."
-sudo launchctl config user path /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin
+set -x  # DEBUG
+_path="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin"
+if test "${_path}" != "$(launchctl getenv PATH)" ; then
+  echo "Adding /usr/local/bin and $HOME/bin to default path via launchctl"
+  echo "Reboot required to take effect."
+  sudo launchctl config user path "${_path}"
+fi
 exit 0
