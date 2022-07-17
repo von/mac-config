@@ -3,6 +3,6 @@
 set -e
 
 echo "Disable chime on boot"
-sudo -n nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=" "
 
 exit 0
