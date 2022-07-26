@@ -1,7 +1,7 @@
 #!/bin/sh
 # Set shell to zsh or, failing that, bash
 
-shells="/usr/local/bin/zsh /bin/zsh /bin/bash"
+shells="/opt/homebrew/bin/zsh /usr/local/bin/zsh /bin/zsh /bin/bash"
 
 sucess=0
 for shell in $shells ; do
