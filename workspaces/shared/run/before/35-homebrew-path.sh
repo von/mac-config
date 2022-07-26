@@ -5,7 +5,7 @@
 # which will cause warnings from 'brew doctor'
 if test ! -f /etc/paths.d/homebrew ; then
   for prefix in /usr/local/ /opt/homebrew/ ; do
-    if test -x "${prefix}/bin/brew" ; then 
+    if test -x "${prefix}/bin/brew" ; then
       echo "Creating /etc/paths.d/homebrew with ${path}"
       cmd="echo \"${prefix}bin:${prefix}sbin\" > /etc/paths.d/homebrew"
       echo $cmd
