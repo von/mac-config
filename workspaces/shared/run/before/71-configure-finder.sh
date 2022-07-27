@@ -1,7 +1,8 @@
 #!/bin/sh
+# Configure Apple Finder and Desktop
 # Kudos: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-set -e
+set -o errexit  # Exit on error
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -36,12 +37,6 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # Remove the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Avoid creating .DS_Store files on USB stores
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
 # Disable disk image verification
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
@@ -51,6 +46,12 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool false
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool false
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false
+
+# Don't show removable media icons on desktop
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+echo Disable showing icons on Desktop
+defaults write com.apple.finder CreateDesktop -bool false && killall Finder
 
 # Show item info near icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
@@ -81,9 +82,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-# Show the ~/Library folder
-chflags nohidden ~/Library
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
