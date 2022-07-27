@@ -3,8 +3,9 @@
 # See `sudo systemsetup -listtimezones` for other values
 set -e
 mytimezone="America/Indiana/Indianapolis"
-currenttimezone=$(sudo -n systemsetup -gettimezone | sed -e "s/Time Zone: //")
-if test "${mytimezone}" != "${currenttimezone}" ; then
+# Non-sudo test kudos: https://apple.stackexchange.com/a/117995/104604
+#   (See comment from Jon Church)
+if test $(date +"%Z") != "EDT" ; then
   echo "Setting timezone to ${mytimezone}"
   sudo -n systemsetup -settimezone "${mytimezone}"
 fi
