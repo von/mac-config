@@ -6,6 +6,7 @@ if test -n "$VIRTUAL_ENV" ; then
   deactivate
 fi
 
+# Don't exit on brew warnings
 echo "Running 'brew doctor'"
-brew doctor || exit 1
+brew doctor
 exit 0
