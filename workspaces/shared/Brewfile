@@ -25,6 +25,8 @@ brew "git-subrepo"
 # Github client
 brew "gh"
 
+brew "svn"  # Needed for some Casks
+
 brew "wget"
 
 brew "markdown"
