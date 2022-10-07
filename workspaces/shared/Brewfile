@@ -76,7 +76,7 @@ brew "the_silver_searcher"  # aka 'ag'
 
 # To allow TouchId to work within tmux
 # https://github.com/fabianishere/pam_reattach
-brew "pam_reattach"
+brew "pam-reattach"
 
 # https://github.com/Textualize/rich-cli
 tap "textualize/rich"
