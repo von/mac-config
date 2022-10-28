@@ -96,6 +96,7 @@ set -o errexit
 echo "Installing basic Homebrew packages for bootstrap..."
 brew bundle --no-lock --file=/dev/stdin <<EOF
 brew "git"
+brew "curl"
 brew "chezmoi"
 brew "myrepos"
 brew "zero-sh/tap/zero"
