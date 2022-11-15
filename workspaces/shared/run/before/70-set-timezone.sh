@@ -7,6 +7,6 @@ mytimezone="America/Indiana/Indianapolis"
 #   (See comment from Jon Church)
 if test $(date +"%Z") != "EDT" ; then
   echo "Setting timezone to ${mytimezone}"
-  sudo -n systemsetup -settimezone "${mytimezone}"
+  sudo systemsetup -settimezone "${mytimezone}"
 fi
 exit 0
