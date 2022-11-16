@@ -104,7 +104,7 @@ EOF
 
 ######################################################################
 #
-# Execute zero using this director as its configuration directory.
+# Execute zero using this directory as its configuration directory.
 
 echo "Executing zero.sh to configure system..."
 ${_zero} setup --directory "${_setup_path}" ${workspace}
