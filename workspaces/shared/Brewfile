@@ -24,6 +24,7 @@ brew "tig"
 brew "git-subrepo"
 # Github client
 brew "gh"
+brew "git-filter-repo"
 
 brew "svn"  # Needed for some Casks
 
