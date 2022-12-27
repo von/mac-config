@@ -1,7 +1,9 @@
 # Brewfile for personal workspace
 
 brew "handbrake"
-brew "abcde"
+# Need to build from source to address mismatch of versions between
+# Perl and MusicBrainz:DiscId
+brew "abcde", args: [ "build-from-source" ]
 brew "cd-discid"
 brew "flac"
 brew "lame"
