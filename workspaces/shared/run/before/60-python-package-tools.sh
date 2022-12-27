@@ -6,6 +6,8 @@ export PIP_REQUIRE_VIRTUALENV=false
 export PYTHONWARNINGS=ignore:DEPRECATION
 
 echo "Installing/upgrading Python package tools"
-python3 -m pip install --upgrade pip setuptools wheel || exit 1
+python3 -m pip install --upgrade pip wheel || exit 1
+# https://setuptools.pypa.io/en/latest/userguide/quickstart.html
+python3 -m pip install --upgrade build || exit 1
 
 exit 0
