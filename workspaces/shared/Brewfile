@@ -79,6 +79,9 @@ brew "the_silver_searcher"  # aka 'ag'
 # https://github.com/fabianishere/pam_reattach
 brew "pam-reattach"
 
+# https://the.exa.website/
+brew "exa"
+
 # https://github.com/Textualize/rich-cli
 tap "textualize/rich"
 brew "rich"
