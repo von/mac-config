@@ -33,7 +33,8 @@ brew "wget"
 brew "markdown"
 brew "grip"  # Github-flavord Markdown
 
-brew "ctags-exuberant"
+# Preferred by tagbar in vim over ctags
+brew "universal-ctags"
 
 # Needed for vim/YouCompleteMe
 brew "cmake"
