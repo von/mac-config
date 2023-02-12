@@ -15,6 +15,8 @@ brew "lsdvd"
 # For flashing Home Assistant SD cards
 cask "balenaetcher"
 
+cask "home-assistant"
+
 # Cask version of Wesnoth is 1.17 development version
 # cask "the-battle-for-wesnoth"
 
