@@ -8,6 +8,12 @@ threshold=$(( 7 * 24 * 60 * 60 ))
 echo "Checking age of last Time Machine backup (will take a while)..."
 
 tm_timestamp=$(tmutil latestbackup -t)
+
+if test -z "${tm_timestamp}" ; then
+  echo "Failed to get last backup time."
+  exit 1
+fi
+
 # Results in something like: 2023-02-11-172049
 echo "Last backup was ${tm_timestamp}"
 
