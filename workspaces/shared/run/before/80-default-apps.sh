@@ -23,4 +23,7 @@ duti -s com.apple.QuickTimePlayerX public.audio all
 duti -s com.apple.QuickTimePlayerX public.mp3 all
 duti -s com.apple.QuickTimePlayerX com.microsoft.waveform-audio all
 
+# And use Quicktime for video files
+duti -s com.apple.QuickTimePlayerX public.mpeg-4 all
+
 exit 0
