@@ -98,7 +98,6 @@ cask "macvim", args: { "no-binaries": true }
 cask "omnigraffle"
 cask "commander-one"
 cask "firefox"
-cask "evernote"
 cask "kindle"
 cask "send-to-kindle"
 cask "hiarcs-chess-explorer"
