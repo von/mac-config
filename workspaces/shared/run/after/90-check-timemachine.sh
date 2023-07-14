@@ -11,7 +11,9 @@ tm_timestamp=$(tmutil latestbackup -t)
 
 if test -z "${tm_timestamp}" ; then
   echo "Failed to get last backup time."
-  exit 1
+  # We might just be off of the home network, so don't make this
+  # a failure.
+  exit 0
 fi
 
 # Results in something like: 2023-02-11-172049
