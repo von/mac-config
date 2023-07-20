@@ -107,7 +107,6 @@ cask "webex"
 cask "hammerspoon"
 cask "karabiner-elements"
 cask "mirrordisplays"
-cask "vox"
 cask "obs"
 cask "microsoft-teams"
 
