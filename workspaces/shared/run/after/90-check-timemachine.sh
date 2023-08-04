@@ -3,7 +3,7 @@
 # Kudos: https://www.macworld.com/article/220774/control-time-machine-from-the-command-line.html
 
 # Warn if older than one week
-threshold=$(( 7 * 24 * 60 * 60 ))
+threshold=7
 
 echo "Checking age of last Time Machine backup (will take a while)..."
 
@@ -26,11 +26,12 @@ backup_seconds=$(date -j -f "%Y-%m-%d-%H%M%S" ${tm_timestamp} +"%s")
 now_seconds=$( date +"%s" )
 
 (( diff = ${now_seconds} - ${backup_seconds} ))
+(( diff_days = diff / (24 * 60 * 60 ) ))
 
-if (( ${diff} > ${threshold} )) ; then
-  echo "Warning: last backup is ${diff} seconds ago."
+if (( ${diff_days} > ${threshold} )) ; then
+  echo "Warning: last backup is ${diff_days} days old."
   exit 1
 fi
 
-echo "Last backup is ${diff} seconds old."
+echo "Last backup is ${diff_days} days old."
 exit 0
