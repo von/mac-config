@@ -84,6 +84,9 @@ brew "pam-reattach"
 # https://the.exa.website/
 brew "exa"
 
+# csv manipulation: https://github.com/burntsushi/xsv
+brew "xsv"
+
 # https://github.com/Textualize/rich-cli
 tap "textualize/rich"
 brew "rich"
