@@ -88,10 +88,6 @@ brew "xsv"
 tap "textualize/rich"
 brew "rich"
 
-# CLI to control display mirroring
-# https://github.com/fcanas/mirror-displays
-brew "fcanas/tap/mirror-displays"
-
 # https://github.com/jakehilborn/displayplacer
 tap "jakehilborn/jakehilborn"
 brew "displayplacer"
@@ -110,7 +106,6 @@ cask "zoom"
 cask "webex"
 cask "hammerspoon"
 cask "karabiner-elements"
-cask "mirrordisplays"
 cask "obs"
 cask "microsoft-teams"
 
