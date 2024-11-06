@@ -18,8 +18,6 @@ brew "pass"
 brew "m-cli"
 brew "chezmoi"
 
-brew "dotbot"
-
 brew "git"
 brew "tig"
 brew "git-subrepo"
