@@ -94,7 +94,7 @@ set -o errexit
 # Install packages needed for bootstrap.
 
 echo "Installing basic Homebrew packages for bootstrap..."
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin upgrade <<EOF
 brew "git"
 brew "curl"
 brew "chezmoi"
