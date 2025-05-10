@@ -89,7 +89,6 @@ brew "rich"
 # https://github.com/jakehilborn/displayplacer
 brew "displayplacer"
 
-cask "skype"
 cask "slack"
 cask "google-chrome"
 cask "macvim", args: { "no-binaries": true }
