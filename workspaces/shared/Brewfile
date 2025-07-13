@@ -70,6 +70,10 @@ brew "neovim"
 
 brew "fzf"
 
+# Coherent PDF Command Line Tools for merging PDFs
+# https://community.coherentpdf.com/
+brew "cpdf"
+
 # https://blink1.thingm.com/blink1-tool/
 brew "blink1"
 
