@@ -104,6 +104,8 @@ cask "hammerspoon"
 cask "karabiner-elements"
 cask "obs"
 cask "microsoft-teams"
+# For printing large images/pdf tiled across multiple pages
+cask "foxitreader"
 
 # CLI for Apple Store: https://github.com/mas-cli/mas
 brew "mas"
