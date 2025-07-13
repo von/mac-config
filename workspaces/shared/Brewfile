@@ -92,7 +92,7 @@ brew "displayplacer"
 
 cask "slack"
 cask "google-chrome"
-cask "macvim", args: { "no-binaries": true }
+cask "macvim-app", args: { "no-binaries": true }
 cask "omnigraffle"
 cask "commander-one"
 cask "firefox"
