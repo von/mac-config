@@ -8,6 +8,10 @@ export PYTHONWARNINGS=ignore:DEPRECATION
 
 error=0
 
+# 'pip --user' installs to $HOME
+echo "Upgrading pip..."
+python3 -m pip install --upgrade --user --break-system-packages pip || error=1
+
 # Python client for neovim: https://github.com/neovim/pynvim
 echo "Installing pynvim"
 # --break-system-packages needed since Python 3.11
