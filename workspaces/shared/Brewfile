@@ -79,6 +79,10 @@ brew "blink1"
 
 brew "the_silver_searcher"  # aka 'ag'
 
+# For use by 'syncer' to sync USB sticks and the like
+# https://github.com/bcpierce00/unison
+brew "unison"
+
 # To allow TouchId to work within tmux
 # https://github.com/fabianishere/pam_reattach
 brew "pam-reattach"
