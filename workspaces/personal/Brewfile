@@ -11,12 +11,5 @@ brew "eye-d3"
 brew "ffmpeg"
 brew "lsdvd"
 
-# https://www.balena.io/etcher/
-# For flashing Home Assistant SD cards
-cask "balenaetcher"
-
-cask "home-assistant"
-
-cask "dropbox"
 cask "google-drive"
 cask "signal"

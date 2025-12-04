@@ -97,19 +97,12 @@ brew "displayplacer"
 cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
-cask "omnigraffle"
-cask "commander-one"
 cask "firefox"
 cask "hiarcs-chess-explorer"
 cask "iterm2"
 cask "zoom"
-cask "webex"
 cask "hammerspoon"
 cask "karabiner-elements"
-cask "obs"
-cask "microsoft-teams"
-# For printing large images/pdf tiled across multiple pages
-cask "foxitreader"
 
 # CLI for Apple Store: https://github.com/mas-cli/mas
 brew "mas"
