@@ -94,7 +94,6 @@ cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
 cask "firefox"
-cask "hiarcs-chess-explorer"
 cask "iterm2"
 cask "zoom"
 cask "hammerspoon"
