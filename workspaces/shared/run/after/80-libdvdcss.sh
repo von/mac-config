@@ -13,6 +13,13 @@ if test "${HOMEBREW_PREFIX}" = "/usr/local" ; then
   exit 0
 fi
 
+# Make sure /usr/local/lib exists
+if test -d /usr/local/lib ; then
+  :
+else
+  sudo mkdir -p /usr/local/lib
+fi
+
 for lib in ${HOMEBREW_PREFIX}/lib/libdvdcss* ; do
   libname=$(basename $lib)
   target=/usr/local/lib/${libname}
