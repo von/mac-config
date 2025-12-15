@@ -90,6 +90,10 @@ brew "rich"
 # https://github.com/jakehilborn/displayplacer
 brew "displayplacer"
 
+# https://github.com/anishathalye/dotbot
+# Used by private/ for installation
+brew "dotbot"
+
 cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
