@@ -20,8 +20,8 @@ echo "${available}/${size} MB available on ${filesystem_to_check}"
 echo "${percent_available} percent available"
 
 # Will be "0" or "1"
-warn=$(bc -l <<< "${percent_available} > ${warning_threshold}")
-if test "${warn}" -eq 1 ; then
+warn=$(bc -l <<< "${percent_available} < ${warning_threshold}")
+if test "${warn}" -eq 0 ; then
   echo "All is good."
 else
   echo "Warning: free space below ${warning_threshold}%"
