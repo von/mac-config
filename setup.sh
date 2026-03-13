@@ -4,6 +4,9 @@
 #
 # Intended for OSX and untested.
 #
+# Installs and uses zero-sh:
+# https://github.com/zero-sh/zero.sh
+#
 ######################################################################
 #
 # Constants
