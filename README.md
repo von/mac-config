@@ -3,5 +3,7 @@ Mac setup using https://github.com/zero-sh/zero.sh
 Set up by running `setup.sh <workspace>` where `<workspace>` is directory under
 `workspaces/`
 
-Note I don't use `default.yaml` as it is too constraining, defaults are set via
-scripts in `run`.
+zero.sh uses `apply-user-defaults` to apply defaults in `default.yaml`
+This can't handle complicated data types (arrays, dicts, etc.) so there
+is still some manual running of `default` in scripts.
+See https://github.com/zero-sh/apply-user-defaults
