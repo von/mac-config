@@ -93,6 +93,9 @@ brew "displayplacer"
 # Used by private/ for installation
 brew "dotbot"
 
+# https://github.com/sorairolake/qrtool
+brew "qrtool"
+
 cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
