@@ -102,6 +102,11 @@ brew "xsv"
 # https://github.com/johnkerl/miller
 brew "miller"
 
+# OCR
+# https://github.com/tesseract-ocr/tesseract
+# Kudos: https://learnhammerspoon.com/chapters/10-paste-an-image-to-ocr-text/
+brew "tesseract"
+
 cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
