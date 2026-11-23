@@ -63,6 +63,8 @@ brew "yubikey-personalization"  # aka 'ykpers'
 
 brew "chrome-cli"
 brew "lua"
+# Lua package manager: https://luarocks.org/
+brew "luarocks"
 
 brew "vim"
 brew "neovim"
