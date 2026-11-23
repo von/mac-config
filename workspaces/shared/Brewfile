@@ -96,6 +96,12 @@ brew "dotbot"
 # https://github.com/sorairolake/qrtool
 brew "qrtool"
 
+# CSV tools
+# https://github.com/BurntSushi/xsv
+brew "xsv"
+# https://github.com/johnkerl/miller
+brew "miller"
+
 cask "slack"
 cask "google-chrome"
 cask "macvim-app", args: { "no-binaries": true }
