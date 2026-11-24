@@ -3,11 +3,7 @@
 
 set -o errexit  # Exit on error
 
-# We use the "MacConfigWasHere" to indicate we have configured the Dock.
-# One can zero this value to force re-configuration, e.g.:
-#   defaults write com.apple.doc MacConfigWasHere -int 0
-#
-_already_configued=$(defaults read com.apple.dock MacConfigWasHere)
+_already_configued=$(defaults read com.vwelch.macconfig MacConfigWasHere)
 if test "${_already_configued}" -eq 1 ; then
   echo "Dock already configured."
 else
@@ -41,7 +37,7 @@ else
   killall -HUP Dock
 
   # Indicate we have configued the Dock
-  defaults write com.apple.dock MacConfigWasHere -int 1
+  defaults write com.vwelch.macconfig MacConfigWasHere -int 1
 fi
 
 exit 0

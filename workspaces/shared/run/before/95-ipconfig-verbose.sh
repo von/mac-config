@@ -5,9 +5,9 @@
 
 # We use the "MacConfigWasHere" to indicate we have configured the Dock.
 # One can zero this value to force re-configuration, e.g.:
-#   defaults write com.apple.doc MacConfigWasHere -int 0
+#   defaults write con.vwelch.macconfig MacConfigWasHere -int 0
 #
-_already_configued=$(defaults read com.apple.doc MacConfigWasHere)
+_already_configued=$(defaults read com.vwelch.macconfig MacConfigWasHere)
 if test "${_already_configued}" -eq 1 ; then
   echo "mac-config already run."
 else

@@ -119,11 +119,29 @@ brew "zero-sh/tap/zero"
 EOF
 
 ######################################################################
+
+_already_configued=$(defaults read com.vwelch.macconfig MacConfigWasHere || echo notset 2> /dev/null)
+if test ${_already_configued} = "notset" ; then
+  echo "Running for first time. Setting up com.vwelch.macconfig MacConfigWasHere"
+  defaults write com.vwelch.macconfig MacConfigWasHere -int 0
+else
+  echo "Detected we've run before."
+fi
+
+######################################################################
 #
 # Execute zero using this directory as its configuration directory.
 
 echo "Executing zero.sh to configure system..."
 ${_zero} setup --directory "${_setup_path}" ${workspace}
+
+if test "${_already_configued}" -eq 0 ; then
+  # Indicate we have already run.
+  # One can zero this value to force re-configuration, e.g.:
+  #   defaults write con.vwelch.macconfig MacConfigWasHere -int 0
+  echo "Finished first run. Setting com.vwelch.macconfig MacConfigWasHere to 1"
+  defaults write com.vwelch.macconfig MacConfigWasHere -int 1
+fi
 
 echo "Success."
 exit 0
