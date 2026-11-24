@@ -87,6 +87,19 @@ for prefix in /usr/local /opt/homebrew ; do
 done
 
 ######################################################################
+# Check for Rosetta and install if not present.
+# Needed for old Intel-based applications.
+# Kudos:
+#   https://apple.stackexchange.com/a/427996/104604
+#   https://stackoverflow.com/a/71331071/197789
+if test -f /Library/Apple/usr/libexec/oah/libRosettaRuntime ; then
+  echo "Rosetta detected."
+else
+  echo "Installing Rosetta"
+  softwareupdate --install-rosetta --agree-to-license
+fi
+
+######################################################################
 #
 # Exit on any error from here forward.
 
